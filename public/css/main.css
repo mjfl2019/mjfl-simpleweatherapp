@@ -1,0 +1,20 @@
+html {
+    background-image: url("/images/japan-map.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    background-position: right;
+    font-family: "arial";
+}
+
+#listCities {
+    font-size:20px;
+}
+
+#txtCity {
+    font-size:20px;
+}
+
+#btnEnter {
+    font-size:20px;
+}
