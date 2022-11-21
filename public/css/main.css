@@ -4,11 +4,12 @@ html {
     background-attachment: fixed;
     background-size: 50%;
     background-position: right;
-    font-family: "arial";
+    font-family: "tahoma";
+    color: #383838;
 }
 
 #listCities {
-    font-size:20px;
+    font-size:25px;
 }
 
 #txtCity {
