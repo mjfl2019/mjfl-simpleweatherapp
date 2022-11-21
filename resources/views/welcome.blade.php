@@ -17,17 +17,20 @@
 
         checkInternetConnection();
         execOpenWeatherMapAPICall();
+        execFourSquarePlacesAPICall();
 
         $("#listCities").change(function(){
             vCity = $("#listCities").val();
             checkInternetConnection();
             execOpenWeatherMapAPICall();
+            execFourSquarePlacesAPICall();
         });
 
         $("#btnEnter").click(function(){
             vCity = $("#txtCity").val();
             checkInternetConnection();
             execOpenWeatherMapAPICall();
+            execFourSquarePlacesAPICall();
         });
 
     });
@@ -58,13 +61,6 @@
                 success: function (d) {
                     var retData = JSON.stringify(d);
                     console.log(retData);
-                    //var pData = JSON.parse(d);
-                    //console.log("Data is " + sData.queuer);
-                    //$.each(d, function(i,v) {
-                        //var nVal = JSON.stringify(v);
-                        //console.log("Data is " + v + ".");
-                        //$("#pNewAcct").text(v);
-                    //});
                 },
                 error: function (jqXHR, exception) {
                         var msg = '';
@@ -100,22 +96,14 @@
 
     function execFourSquarePlacesAPICall() {
         $.ajax({
-                type: 'POST',
-                url: '',
-                /*ata: { queue_id:1},
-                cache: false,*/
+                type: 'GET',
+                url: 'https://api.foursquare.com/v3/places/search?near='+vCity+',JP',
+                headers: {"Accept": "application/json", "Authorization": "fsq36WezprtE3gwJ10Qw7lX7Z+yKv+RTOWOOrEjx69xBO/8="},
                 tryCount : 0,
                 retryLimit : 3,
                 success: function (d) {
                     var retData = JSON.stringify(d);
                     console.log(retData);
-                    //var pData = JSON.parse(d);
-                    //console.log("Data is " + sData.queuer);
-                    //$.each(d, function(i,v) {
-                        //var nVal = JSON.stringify(v);
-                        //console.log("Data is " + v + ".");
-                        //$("#pNewAcct").text(v);
-                    //});
                 },
                 error: function (jqXHR, exception) {
                         var msg = '';
