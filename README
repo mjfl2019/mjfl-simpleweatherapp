@@ -1,7 +1,10 @@
 Hi, many thanks for trying my simpleweather app!
 
+NOTE: Please install first the XAMPP 8.1.10 for windows then import the included
+file simpleweather.sql in phpmyadmin to run the program.
+
 This app was built using Laravel PHP and intended to use when traveling
-in Japan country.
+in the country of Japan.
 
 The app is very simple yet powerful. It leverages from the power of AJAX
 jQuery that asynchronously pulls the necessary API calls to OpenWeatherMap
